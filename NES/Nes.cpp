@@ -3349,7 +3349,7 @@ void	NES::DelCheatCode( INT no )
 	if( m_CheatCode.size()-1 < no )
 		return;
 
-	m_CheatCode.erase( &m_CheatCode[no] );
+	m_CheatCode.erase( m_CheatCode.begin() + no );
 }
 
 DWORD	NES::CheatRead( INT length, WORD addr )
