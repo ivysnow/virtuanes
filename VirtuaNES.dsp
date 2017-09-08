@@ -5,17 +5,17 @@
 # TARGTYPE "Win32 (x86) Application" 0x0101
 
 CFG=VirtuaNES - Win32 Debug
-!MESSAGE ‚±‚ê‚Í—LŒø‚ÈÒ²¸Ì§²Ù‚Å‚Í‚ ‚è‚Ü‚¹‚ñB ‚±‚ÌÌßÛ¼Şª¸Ä‚ğËŞÙÄŞ‚·‚é‚½‚ß‚É‚Í NMAKE ‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+!MESSAGE ‚±‚ê‚Í—LŒø‚ÈÒ²¸Ì§²Ù‚Å‚Í‚ ‚è‚Ü‚¹‚ñB ‚±‚ÌÌßÛ¼Şª¸Ä‚ğËŞÙÄŞ‚·‚é‚½‚ß‚É‚?NMAKE ‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
 !MESSAGE [Ò²¸Ì§²Ù‚Ì´¸½Îß°Ä] ºÏİÄŞ‚ğg—p‚µ‚ÄÀs‚µ‚Ä‚­‚¾‚³‚¢
 !MESSAGE 
 !MESSAGE NMAKE /f "VirtuaNES.mak".
 !MESSAGE 
 !MESSAGE NMAKE ‚ÌÀs‚É\¬‚ğw’è‚Å‚«‚Ü‚·
-!MESSAGE ºÏİÄŞ ×²İã‚ÅÏ¸Û‚Ìİ’è‚ğ’è‹`‚µ‚Ü‚·B—á:
+!MESSAGE ºÏİÄ?×²İã‚ÅÏ¸Û‚Ìİ’è‚ğ’è‹`‚µ‚Ü‚·B—á:
 !MESSAGE 
 !MESSAGE NMAKE /f "VirtuaNES.mak" CFG="VirtuaNES - Win32 Debug"
 !MESSAGE 
-!MESSAGE ‘I‘ğ‰Â”\‚ÈËŞÙÄŞ Ó°ÄŞ:
+!MESSAGE ‘I‘ğ‰Â”\‚ÈËŞÙÄ?Ó°ÄŞ:
 !MESSAGE 
 !MESSAGE "VirtuaNES - Win32 Release" ("Win32 (x86) Application" —p)
 !MESSAGE "VirtuaNES - Win32 Debug" ("Win32 (x86) Application" —p)
@@ -82,7 +82,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib comctl32.lib imm32.lib shlwapi.lib libcmtd.lib /nologo /subsystem:windows /map /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib comctl32.lib imm32.lib shlwapi.lib /nologo /subsystem:windows /map /debug /machine:I386 /pdbtype:sept
 # SUBTRACT LINK32 /nodefaultlib
 
 !ELSEIF  "$(CFG)" == "VirtuaNES - Win32 Profile"
@@ -5848,6 +5848,102 @@ SOURCE=.\NES\VsUnisystem.h
 # PROP Default_Filter "*.c *.cpp *.h"
 # Begin Source File
 
+SOURCE=.\zlib\adler32.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\compress.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\crc32.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\crc32.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\deflate.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\deflate.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\gzclose.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\gzguts.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\gzlib.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\gzread.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\gzwrite.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\infback.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inffast.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inffast.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inffixed.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inflate.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inflate.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inftrees.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\inftrees.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\ioapi.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\ioapi.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\trees.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\trees.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\uncompr.c
+# End Source File
+# Begin Source File
+
 SOURCE=.\zlib\unzip.c
 # End Source File
 # Begin Source File
@@ -5864,7 +5960,11 @@ SOURCE=.\zlib\zlib.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\zlib\zlib.lib
+SOURCE=.\zlib\zutil.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\zlib\zutil.h
 # End Source File
 # End Group
 # Begin Group "DXGuid"
