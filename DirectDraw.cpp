@@ -1364,7 +1364,7 @@ DDSURFACEDESC2	ddsd;
 
 	// Palette copy
 	if( ddsd.ddpfPixelFormat.dwRGBBitCount == 8 ) {
-		static	linecolor = 0;
+		static	INT linecolor = 0;
 
 		if( m_LineColormode[1] != linecolor ) {
 			linecolor = m_LineColormode[1];

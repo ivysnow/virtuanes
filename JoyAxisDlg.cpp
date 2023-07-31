@@ -65,7 +65,7 @@ DLGMSG	CJoyAxisDlg::OnInitDialog( DLGMSGPARAM )
 	// IDコンボボックス
 	::SendDlgItemMessage( m_hWnd, IDC_AST_ID_COMBO, CB_RESETCONTENT, 0, 0 );
 	CHAR	szStr[MAX_PATH+16];
-	for( i = 0; i < DirectInput.m_nJoystickNum; i++ ) {
+	for( INT i = 0; i < DirectInput.m_nJoystickNum; i++ ) {
 		::wsprintf( szStr, " %d : %s", i, DirectInput.m_JoyName[i].c_str() );
 		::SendDlgItemMessage( m_hWnd, IDC_AST_ID_COMBO, CB_INSERTSTRING, (WPARAM)i, (LPARAM)szStr );
 	}

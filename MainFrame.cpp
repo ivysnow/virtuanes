@@ -9,6 +9,8 @@
 #include <commdlg.h>
 #include <imm.h>
 
+#include <mbstring.h>
+
 #include <string>
 using namespace std;
 
@@ -2823,7 +2825,8 @@ void	CMainFrame::OnUpdateMenu( HMENU hMenu, UINT uID )
 			const UCHAR seps[] = " \t\0";	// セパレータ
 
 			// ID番号からインデックスを探す
-			for( INT i = 0; CConfig::ShortcutKeyID[i*3+0] != uID; i++ );
+			INT i = 0;
+			for( ; CConfig::ShortcutKeyID[i*3+0] != uID; i++ );
 
 			::GetMenuString( m_hMenu, CConfig::ShortcutKeyID[i*3+0], szMenuString, 256, MF_BYCOMMAND );
 

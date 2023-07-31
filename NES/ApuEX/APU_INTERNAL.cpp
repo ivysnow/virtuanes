@@ -196,7 +196,8 @@ CHAR	buf[512];
 			pbuf = p+1;	// 次
 
 			// 音色データを取得
-			for( INT i = 0; i < TONEDATA_LEN; i++ ) {
+			INT i = 0;
+			for( ; i < TONEDATA_LEN; i++ ) {
 				val = ::strtol( pbuf, &p, 10 );
 				if( pbuf == p )	// 取得失敗？
 					break;

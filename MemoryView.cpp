@@ -537,7 +537,8 @@ void	CMemoryView::OnDraw( HDC hDC )
 
 	CHAR	szBuf[256];
 	INT	address = m_StartAddress;
-	for( INT i = 0; i < m_DispLines; i++ ) {
+	INT	i = 0;
+	for( ; i < m_DispLines; i++ ) {
 		::wsprintf( szBuf, "%04X  ", address&0xFFFF );
 
 		for( INT d = 0; d < 16; d++ ) {
